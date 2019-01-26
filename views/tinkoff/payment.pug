@@ -1,0 +1,21 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		link(rel='stylesheet', href='main.css')
+		title Testing Merchant API
+		style.
+			.tinkoffPayRow{display:block;margin:1%;width:160px;}
+		script(src='https://securepay.tinkoff.ru/html/payForm/js/tinkoff.js')
+	body
+		form(name='TinkoffPayForm', onsubmit='pay(this); return false;')
+			input.tinkoffPayRow(type='hidden', name='terminalkey', value='TinkoffBankTest')
+			input.tinkoffPayRow(type='hidden', name='frame', value='true')
+			input.tinkoffPayRow(type='hidden', name='language', value='ru')
+			input.tinkoffPayRow(type='text', placeholder='Сумма заказа', name='amount', required='')
+			input.tinkoffPayRow(type='text', placeholder='Номер заказа', name='order')
+			input.tinkoffPayRow(type='text', placeholder='Описание заказа', name='description')
+			input.tinkoffPayRow(type='text', placeholder='ФИО плательщика', name='name')
+			input.tinkoffPayRow(type='text', placeholder='E-mail', name='email')
+			input.tinkoffPayRow(type='text', placeholder='Контактный телефон', name='phone')
+			input.tinkoffPayRow(type='submit', value='Оплатить')

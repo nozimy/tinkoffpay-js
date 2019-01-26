@@ -1,0 +1,164 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		link(rel='stylesheet', href='main.css')
+		title Testing Merchant API
+		style(type="text/css").
+			body {
+				background-color: #00796B;
+				font-size: 1.2em;
+				color: #ffffff;
+			}
+
+			.error {
+				color: #B71C1C;
+				font-weight: bold;
+			}
+
+			.highlight {
+				color: #212121;
+				font-weight: bold;
+			}
+
+			.card {
+				color: #727272;
+				background-color: #fff;
+				word-wrap: break-word;
+				padding: 0;
+				margin: 10px;
+				/*margin: -40px 10px 10px 10px;*/
+				/*border: 1px solid #9E9E9E;*/
+				/*border-top: 50px solid #727272;*/
+				/*border-radius: 2px;*/
+				box-shadow: 1px 1px 1px #212121;
+			}
+
+			h2 {
+				background-color: #727272;
+				margin: 0;
+				padding: 10px;
+				color: #fff;
+			}
+
+			.article {
+				margin: 10px;
+				padding: 10px;
+			}
+
+			a {
+				color: #448AFF;
+			}
+	body
+		h1(align='center') Тестирование MerchantAPI
+		.card
+			h2 Метод Init:
+			.article
+				p URL: !{api._api_url}
+				p Params: !{JSON.stringify(params1)}
+				p
+					span.highlight Response !{out.out1}
+				if (api._error)
+					p
+						span.error= api._error
+				else
+					p
+						span.highlight Status: !{api._status}
+					p
+						span.highlight PaymentUrl:
+						a(href=api._paymentUrl, target='_blank')= api._paymentUrl
+					p
+						span.highlight PaymentId: #{api._paymentId}
+		//.card
+		//	h2 Метод GetState:
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out2']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight Status: !{api.status}
+		//			p
+		//				span.highlight PaymentId: !{api.paymentId}
+		//			p
+		//				span.highlight OrderId: !{orderId}
+		//.card
+		//	h2 Метод Confirm:
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out3']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight Status: !{api.status}
+		//			p
+		//				span.highlight PaymentId: !{api.paymentId}
+		//.card
+		//	h2 Метод Resend
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out4']}
+		//		p
+		//			span.highlight Count: #{api.Count}
+		//.card
+		//	h2 Метод AddCustomer
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out5']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight CustomerKey: !{api.customerKey}
+		//.card
+		//	h2 Метод GetCustomer
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out6']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight CustomerKey !{api.customerKey}
+		//.card
+		//	h2 Метод RemoveCustomer
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out7']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight CustomerKey !{api.customerKey}
+		//.card
+		//	h2 Метод GetCardList
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out8']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight CustomerKey !{api.customerKey}
+		//.card
+		//	h2 Метод RemoveCard
+		//	.article
+		//		p
+		//			span.highlight Response: !{out['out9']}
+		//		if (api.error)
+		//			p
+		//				span.error= api.error
+		//		else
+		//			p
+		//				span.highlight CustomerKey !{api.customerKey}
+
+
+
